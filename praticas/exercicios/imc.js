@@ -5,12 +5,12 @@ form.addEventListener('submit', function(e){
     console.log('Evento previnido')
     setResultado('Obrigado por enviar');
 });
-
+// function para criar paragrafro\/
 function criaP (){
     const p = document.createElement('p');
     return p;
 }
-
+// Na div "exibir" mostrar o resultado
 function setResultado (msg) {
     const exibir = document.querySelector('#exibir');
     exibir.innerHTML = '';
@@ -18,6 +18,3 @@ function setResultado (msg) {
 }
 
 
-// nome-do-elemento.classList.add('nome-da-classe);
-// dessa forma o js procura a classe ou cria para o seu documento HTML
-// No código acima criamos uma tag <p> da classe ('paragrafo-resultado');
