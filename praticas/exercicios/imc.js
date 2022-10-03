@@ -9,6 +9,8 @@ form.addEventListener('submit', function(e){
     const peso = Number(inputPeso.value);
     const altura = Number(inputAltura.value);
     // Pegando apenas os valores dos inputs /\
+
+    // Validando formato do peso
     if (!peso) {
         setResultado('Peso inválido', false);
         return;
@@ -16,6 +18,7 @@ form.addEventListener('submit', function(e){
 
     if (!altura) {
         setResultado('Altura inválida', false);
+        return;
     }
 
     const imc = getImc(peso,altura);
@@ -35,7 +38,7 @@ function getNivelImc (imc) {
     if(imc >= 29.9) return nivel[3];
     if (imc >= 24.9) return nivel[2];
     if (imc >= 18.5) return nivel[1];
-    if (imc <= 18.5) return nivel = [0];
+    if (imc <= 18.5) return nivel[0];
 }
 
 function getImc(peso, altura){
