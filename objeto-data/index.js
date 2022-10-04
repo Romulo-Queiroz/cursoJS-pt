@@ -10,3 +10,4 @@ const agora = Date.now();
 console.log(agora);
 // podemos usar diretamente
 console.log(Date.now());
+
