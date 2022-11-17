@@ -26,3 +26,19 @@ function falaNome() {
 
 const nota = {whatWillDo:'falaNome procurará em seus "pais" a variável nome,'+
  'neste caso na linha 21, mesmo estando fora do escopo da function'};
+
+//  Closures *Aula pequena*
+
+const definicaoClosures = {definição:'È a habilidade da função acessar o escopo global'};
+
+function exemploClosures(nome) {
+    return function() {
+        return nome;
+    };
+}
+
+const parametroOne = exemploClosures('Renato');
+const parametroTwo = exemploClosures('Outro nome');
+
+console.log(parametroOne(),parametroTwo());
+
