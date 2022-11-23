@@ -19,14 +19,24 @@ function exibirText () {
 };
 exibirText();
 
-function criaDiv(){
+function preencheDiv(){
     // variáveis cria div/ armazena nome / armazena texto
     const nome = 'Rômulo-Developer';
     nome.id = 'nomeDaClasse';
     var conteudo = (`Olá, estou aqui. Criei este texto numa função :) keep going with you study love u ${nome}`)
+    texto2 ='Texto criado/ div criada com JS puro'
+    //criando div
+        var div = document.createElement('div');
+        div.id = 'container'; //criando id da div
+        div.innerHTML = `${texto2}`;  //texto dentro da div
+        div.className = 'container'; // classe da div 
+        document.body.appendChild(div);
+         
     //adicionando no meu html o conteudo
 
     document.getElementById('div1').innerHTML = `${conteudo}`
 
 }
-criaDiv();
+preencheDiv();
+
+
