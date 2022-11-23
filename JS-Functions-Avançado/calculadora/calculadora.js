@@ -1,5 +1,8 @@
 function criaCalculadora () {
     return {
+        nome(){
+            alert('Hello, me diga seu nome:')
+        },
         display : document.querySelector('.display'),
         
         inicia() {
