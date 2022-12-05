@@ -31,20 +31,29 @@ function confere() {
 }
 
 function configFimDoJogo(){
-  inputTexto.desabled = true;
-  btn.desabled = true;
-  botaoreniciar = document.createElement('button');
-  botaoreniciar = textContent = 'iniciar novo jogo';
-  ;
+  inputTexto.disabled = true;
+  btn.disabled = true;
+
+  dica.textContent= '';
+  inputTexto.textContent = '';
+
+  botaoReinicio = document.createElement('button');
+  botaoReinicio.textContent = 'Iniciar novo jogo';
+  document.body.appendChild(botaoReinicio);
+  botaoReinicio.addEventListener('click', reniciarJogo);
+  
 }
 
 function reniciarJogo() {
   contaPalpite = 1;
-  
-  botaoreniciar.parenNode.removeChild(botaoreniciar);
+  botaoReinicio.parentNode.removeChild(botaoReinicio);
 
-  inputTexto.desabled = false;
-  btn.desabled = false;
+  dica.textContent = '';
+  resultado.textContent = '';
+  inputTexto.textContent = '';
+
+  inputTexto.disabled = false;
+  btn.disabled = false;
   inputTexto.value = '';
   inputTexto.focus();
 
