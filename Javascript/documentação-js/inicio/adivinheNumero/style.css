@@ -17,3 +17,9 @@ body {
   color: white;
   padding: 3px;
 }
+
+#tentativas{
+  width: 240px;
+  height: 18px;
+  display: inline-block;
+}
