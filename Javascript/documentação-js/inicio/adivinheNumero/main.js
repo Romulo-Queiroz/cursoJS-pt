@@ -14,6 +14,8 @@ function confere() {
   if (palpite == numeroAleatorio) {
     resultado.textContent = "Parabéns você acertou!";
     resultado.style.backgroundColor = "green";
+    tentativa.textContent = '';
+    dica.textContent = '';
     configFimDoJogo();
   } else if (palpite < numeroAleatorio) {
     dica.textContent = "Opa, o número é muito menor...";
