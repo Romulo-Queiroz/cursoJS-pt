@@ -84,3 +84,8 @@ form button:hover {
 .btn-eq:hover{
   background-color: rgb(66, 189, 230);
 }
+
+.error-text {
+  font-size: 12px;
+  color: rgba(255, 0, 0, 0.63);
+}
