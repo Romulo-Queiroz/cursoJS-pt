@@ -23,7 +23,9 @@ class ValidaFormulario {
         const label = campo.previousElementSibling.innerHTML;
         if (!campo.value) {
         this.criaErro(campo, `Campo "${label}" não pode estar em branco.`);
+        valid = false
       }
+      
     }
   }
   criaErro(campo, msg) {
