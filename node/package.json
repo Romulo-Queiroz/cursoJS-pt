@@ -1,0 +1,12 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "primeiro projet com node",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Romulo",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
