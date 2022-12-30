@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "primeiro projet com node",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
   "author": "Romulo",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
   }
 }
