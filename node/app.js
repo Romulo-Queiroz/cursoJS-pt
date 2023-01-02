@@ -1,5 +1,5 @@
 const express = require("express");
-const { randomUUID } = require("crypto");
+
 const app = express();
 
 app.use(express.json());
@@ -25,7 +25,7 @@ app.post("/products", (request, response) => {
   const product = {
     name,
     price,
-    id: randomUUID(),
+    id: Math.random().toFixed(1),
   };
 
   products.push(product);
