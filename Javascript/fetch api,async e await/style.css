@@ -1,17 +1,33 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.nav-bar {
-  list-style: none;
-  padding: 12px;
-  background-color: rgb(179, 175, 175);
+.container {
+  background-color: rgb(255, 179, 79);
+  width: 800px;
+  height: 800px;
+  align-items: center;
   margin: 0 auto;
+  display: flex;
 }
-.nav-bar a {
-  text-decoration: none;
-  color: #333;
-  font-size: 32px;
-  justify-content: center;
+
+#muda,
+#sizers,
+#change {
+  width: 200px;
+  height: 38px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+#texto {
+  width: 200px;
+  height: 38px;
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+}
+
+#informativo {
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  display: inline-block;
 }
