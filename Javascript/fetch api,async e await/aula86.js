@@ -66,7 +66,12 @@ function crieParagrafo() {
   console.log(input);
   document.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
-      console.log(input.value);
+      section.innerHTML = ` 
+      <div class="containerOne">
+      <p id="informativo"> ${input.value} </p>
+      <button id="chamaBtn" class="alterar">Continue</button>
+      </div>
+      `;
     }
   });
 

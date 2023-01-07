@@ -29,5 +29,25 @@
   text-align: center;
   color: black;
   font-weight: bold;
-  display: inline-block;
+  display: block;
+}
+
+.containerOne {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.alterar {
+  width: 88px;
+  height: 42px;
+
+  top: 200px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+
+  font-weight: bold;
+  display: block;
 }
