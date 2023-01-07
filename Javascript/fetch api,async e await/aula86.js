@@ -73,6 +73,9 @@ function crieParagrafo() {
       </div>
       `;
     }
+
+    let btnNovo = document.getElementById("chamaBtn");
+    btnNovo.addEventListener("click", proximaFase);
   });
 
   informativo = document.createElement("p");
@@ -81,3 +84,108 @@ function crieParagrafo() {
   informativo.innerHTML = "Crie seu Paragrafo";
   section.appendChild(informativo);
 }
+
+function proximaFase() {
+  let section = document.querySelector("section");
+  let btnNovo = document.getElementById("chamaBtn");
+  texto = document.getElementById("informativo");
+  texto.innerHTML = "Bem vindo ao game, Você conseguirá chegar ao final?";
+
+  btnNovo.style = "display: none";
+  section.style = "background-color: lightgreen";
+
+  let btnNovo2 = document.createElement("button");
+  btnNovo2.appendChild;
+  btnNovo2.id = "chamaBtn2";
+  btnNovo2.className = "jockersBtn";
+  btnNovo2.innerHTML = "Continue";
+  section.appendChild(btnNovo2);
+
+  btnNovo2.addEventListener("click", proximaFase2);
+}
+
+function proximaFase2() {
+  btnNovo2 = document.getElementById("chamaBtn2");
+  btnNovo2.style =
+    "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);";
+  btnNovo2.innerHTML = "Continue??";
+  btnNovo2.addEventListener("click", proximaFase3);
+}
+
+proximaFase3 = () => {
+  btnNovo2 = document.getElementById("chamaBtn2");
+  btnNovo2.style =
+    "position: absolute; top: 10%; left: 40%; transform: translate(-50%, -50%); width: 122px; height: 42px;";
+  btnNovo2.innerHTML = "Continue??? WTF IS THIS?";
+  btnNovo2.addEventListener("click", proximaFase4);
+};
+
+proximaFase4 = () => {
+  btnNovo2 = document.getElementById("chamaBtn2");
+  btnNovo2.style =
+    "position: absolute; top: 15%; left: 45%; transform: translate(-50%, -50%); width: 122px; height: 42px;";
+  btnNovo2.innerHTML = "I don't know what to do";
+  btnNovo2.addEventListener("click", proximaFase5);
+};
+proximaFase5 = () => {
+  btnNovo2 = document.getElementById("chamaBtn2");
+  btnNovo2.style =
+    "position: absolute; top: 45%; left: 15%; transform: translate(-50%, -50%); width: 122px; height: 42px;";
+  btnNovo2.innerHTML = "Tente mais um pouco :?";
+  btnNovo2.addEventListener("click", proximaFase6);
+};
+proximaFase6 = () => {
+  p = document.getElementById("informativo");
+  p.innerHTML = "Você consegue...";
+  btnNovo2 = document.getElementById("chamaBtn2");
+  btnNovo2.style =
+    "position: absolute; top: 45%; left: 35%; transform: translate(-50%, -50%); width: 132px; height: 48px;";
+  btnNovo2.innerHTML = "Uma dica: esqueça os botões...";
+  btnNovo2.addEventListener("click", proximaFase7);
+};
+proximaFase7 = () => {
+  section = document.querySelector("section");
+
+  btn1 = document.createElement("button");
+  btn1.appendChild;
+  btn1.id = "btn1";
+  btn1.className = "jockersBtn";
+  btn1.style =
+    "position: absolute; top: 20%; left: 65%; transform: translate(-50%, -50%); width: 132px; height: 48px;";
+  btn1.innerHTML = "Proxima fase";
+  section.appendChild(btn1);
+
+  btn2 = document.createElement("button");
+  btn2.appendChild;
+  btn2.id = "btn2";
+  btn2.className = "jockersBtn";
+  btn2.style =
+    "position: absolute; top: 25%; left: 35%; transform: translate(-50%, -50%); width: 132px; height: 48px;";
+  btn2.innerHTML = "FIM DE JOGO";
+  section.appendChild(btn2);
+
+  btn1.addEventListener("click", proximaFase8);
+  btn2.addEventListener("click", proximaFase9);
+};
+
+proximaFase8 = () => {
+  section = document.querySelector("section");
+  btn1 = document.getElementById("btn1");
+  btn1.style = "display: none";
+  btn2 = document.getElementById("btn2");
+  btn2.style = "display: none";
+  p = document.getElementById("informativo");
+  p.innerHTML = "Você não deveria ter clicado aqui";
+  p.style = "color: red; background-color: black;";
+};
+
+proximaFase9 = () => {
+  section = document.querySelector("section");
+  btn1 = document.getElementById("btn1");
+  btn1.style = "display: none";
+  btn2 = document.getElementById("btn2");
+  btn2.style = "display: none";
+  p = document.getElementById("informativo");
+  p.innerHTML = "Ultima dica use o teclado";
+  p.style = "color: red; background-color: black;";
+};

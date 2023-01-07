@@ -51,3 +51,15 @@
   font-weight: bold;
   display: block;
 }
+
+.jockersBtn {
+  width: 102px;
+  height: 32px;
+  font-weight: bold;
+}
+.jockersBtn:hover {
+  width: 102px;
+  height: 32px;
+
+  background-color: antiquewhite;
+}
