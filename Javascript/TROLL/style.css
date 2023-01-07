@@ -1,9 +1,18 @@
-.container {
-  background-color: rgb(255, 179, 79);
+#game-container {
   width: 800px;
   height: 800px;
   align-items: center;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn {
+  padding: 20px 40px;
+  font-size: 16px;
+  font-weight: bold;
   display: flex;
 }
 
