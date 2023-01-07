@@ -26,6 +26,12 @@ function startGame() {
     case 3:
       createLevelFour();
       break;
+    case 4:
+      createLevelFive();
+      break;
+    case 5:
+      createLevelSix();
+      break;
   }
 }
 
@@ -114,7 +120,7 @@ function createLevelFour() {
   btn.innerText = "Tente clicar aqui";
 
   btn.addEventListener("mouseover", () => {
-    btn.style = `position: absolute; top: ${createRandomPosition()}px; left: ${createRandomPosition()}px;`;
+    /* btn.style = `position: absolute; top: ${createRandomPosition()}px; left: ${createRandomPosition()}px;`; */
   });
 
   btn.addEventListener("click", () => {
@@ -123,6 +129,40 @@ function createLevelFour() {
   });
 
   gameContainer.appendChild(btn);
+}
+
+function createLevelFive() {
+  if (!gameContainer) return;
+
+  gameContainer.style = `background-color: ${createRandomColor()}`;
+
+  criaP("Bem vindo ao game do troll");
+  criaP("Você pode sair a qualquer momento, mas não após a ultima fase");
+
+  const btn = document.createElement("button");
+  btn.innerText = "Começar";
+  btn.classList.add("btn");
+
+  btn.addEventListener("click", () => {
+    currentLevelIndex++;
+    createLevelSix();
+  });
+
+  gameContainer.appendChild(btn);
+}
+
+function criaP(textoAqui) {
+  let gameContainer = document.querySelector("#game-container");
+  let p = document.createElement("p");
+  p.id = "texto";
+  p.innerHTML = textoAqui;
+  gameContainer.appendChild(p);
+}
+
+function createLevelSix() {
+  gameContainer.innerHTML = `
+  <h1> YOU WIN!</h1>
+ `;
 }
 
 // btn = document.getElementById("change");
@@ -135,7 +175,7 @@ function createLevelFour() {
 //   criaButton();
 // }
 
-// function criaButton() {
+// function criaButton() {createRandomColor
 //   let section = document.querySelector("section");
 //   btnNew = document.createElement("button");
 
