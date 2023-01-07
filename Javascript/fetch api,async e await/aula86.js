@@ -63,8 +63,8 @@ function crieParagrafo() {
     <input type="text" id="texto" placeholder="Digite um texto">
     `;
   let input = document.getElementById("texto");
-  console.log(input);
-  document.addEventListener("keypress", function (e) {
+
+  input.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
       section.innerHTML = ` 
       <div class="containerOne">
@@ -188,4 +188,14 @@ proximaFase9 = () => {
   p = document.getElementById("informativo");
   p.innerHTML = "Ultima dica use o teclado";
   p.style = "color: red; background-color: black;";
+};
+
+proximaFase10 = () => {
+  function isKeyPressed(event) {
+    if (event.ctrlKey) {
+      console.log("The CTRL key was pressed!");
+    } else {
+      console.log("The CTRL key was not pressed!");
+    }
+  }
 };
