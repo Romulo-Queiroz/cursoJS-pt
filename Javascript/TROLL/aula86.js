@@ -191,11 +191,9 @@ proximaFase9 = () => {
 };
 
 proximaFase10 = () => {
-  function isKeyPressed(event) {
-    if (event.ctrlKey) {
-      console.log("The CTRL key was pressed!");
-    } else {
-      console.log("The CTRL key was not pressed!");
+  document.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      console.log("Enter");
     }
-  }
+  });
 };
