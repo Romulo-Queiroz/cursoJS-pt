@@ -125,7 +125,7 @@ function createLevelFour() {
   btn.innerText = "Tente clicar aqui";
 
   btn.addEventListener("mouseover", () => {
-    /* btn.style = `position: absolute; top: ${createRandomPosition()}px; left: ${createRandomPosition()}px;`; */
+    btn.style = `position: absolute; top: ${createRandomPosition()}px; left: ${createRandomPosition()}px;`;
   });
 
   btn.addEventListener("click", () => {
@@ -147,6 +147,10 @@ function createLevelFive() {
   const btn = document.createElement("button");
   btn.innerText = "Começar";
   btn.classList.add("btn");
+
+  btn.addEventListener("mouseover", () => {
+    btn.style = `position: absolute; top: ${createRandomPosition()}px; left: ${createRandomPosition()}px;`;
+  });
 
   btn.addEventListener("click", () => {
     currentLevelIndex++;
