@@ -72,12 +72,17 @@ function createLevelTwo() {
   btn.setAttribute("class", "btn");
 
   btn.addEventListener("click", () => {
-    gameContainer.style = `width: ${createRandomPosition()}px; height: ${createRandomPosition()}px`;
-    currentLevelIndex++;
-    startGame();
+    gameContainer.style = `background-color: ${createRandomColor()}; width: ${createRandomPosition()}px; height: ${createRandomPosition()}px;`;
+    btn.innerText = "Alterar tamanho não funciona";
   });
-
   gameContainer.appendChild(btn);
+
+  gameContainer.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      currentLevelIndex++;
+      startGame();
+    }
+  });
 }
 
 function createLevelThree() {
@@ -231,7 +236,7 @@ function createLevelSix() {
 //     `;
 //   let input = document.getElementById("texto");
 
-//   input.addEventListener("keypress", function (e) {
+//   /* input.addEventListener("keypress", function (e) {
 //     if (e.key === "Enter") {
 //       section.innerHTML = `
 //       <div class="containerOne">
@@ -239,7 +244,7 @@ function createLevelSix() {
 //       <button id="chamaBtn" class="alterar">Continue</button>
 //       </div>
 //       `;
-//     }
+//     } */
 
 //     let btnNovo = document.getElementById("chamaBtn");
 //     btnNovo.addEventListener("click", proximaFase);
