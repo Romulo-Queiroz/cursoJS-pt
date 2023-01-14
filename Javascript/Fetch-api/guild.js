@@ -4,18 +4,23 @@ const input = document.querySelector("input");
 // Escutando o evento de submit do formulário
 let button = document.querySelector("button");
 button.addEventListener("click", (event) => {
+  event.preventDefault();
   // Capturando o valor do input
-  const name = input.value;
+  let name = input.value;
+  console.log(name);
 
   // Fazendo a requisição fetch
   fetch(`https://api.tibiadata.com/v3/guild/${name}`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      let div = document.getElementById("guilds");
+      div.innerHTML = `
+    
+      <p class="details" > Guild name : ${data.guilds.guild.name}</p>
+      <p class="details" > World : ${data.guilds.guild.world}</p>
+      `;
     })
     .catch((error) => {
       // Trate o erro
     });
-
-  console.log(data);
 });

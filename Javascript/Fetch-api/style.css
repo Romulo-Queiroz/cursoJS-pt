@@ -1,0 +1,14 @@
+.section {
+  background-color: rgb(236, 158, 56);
+
+  margin: 0 auto;
+  text-align: center;
+
+  width: 850px;
+  height: 750px;
+}
+
+.details {
+  font-weight: bold;
+  font-size: 18px;
+}
