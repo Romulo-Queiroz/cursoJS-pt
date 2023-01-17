@@ -18,6 +18,7 @@ button.addEventListener("click", (event) => {
     
       <p class="details" > Guild name : ${data.guilds.guild.name}</p>
       <p class="details" > World : ${data.guilds.guild.world}</p>
+      
       <img src="${data.guilds.guild.logo_url}"></img>
       `;
     })
